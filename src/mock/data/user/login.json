@@ -1,0 +1,70 @@
+{
+  "token": "admin",
+  "routes": [{
+    "component": "layout",
+    "name":  "layout",
+    "path":  "/layout",
+    "redirect": "/home",
+    "meta": {
+      "title": "App"
+    },
+    "children": [
+      {
+      "component": "home",
+      "name": "home",
+      "path": "/home",
+      "redirect": "",
+      "meta": {
+        "title": "首页",
+        "breadTitle": "首页",
+        "fixed": true
+      }
+    },{
+      "component": "system_user",
+      "name": "system_user",
+      "path": "/system/user",
+      "redirect": "",
+      "meta": {
+        "title": "用户管理",
+        "breadTitle": "系统管理,用户管理"
+      }
+    }, {
+      "component": "system_role",
+      "name":  "system_role",
+      "path":  "/system/role",
+      "redirect": "",
+      "meta": {
+        "title": "角色管理",
+        "breadTitle": "系统管理,角色管理"
+      }
+    }, {
+      "component": "system_menu",
+      "name":  "system_menu",
+      "path":  "/system/menu",
+      "redirect": "",
+      "meta": {
+        "title": "菜单管理",
+        "breadTitle": "系统管理,菜单管理"
+      }
+    }]
+  }
+  ],
+  "menus": [
+    {
+      "title": "系统管理",
+      "index": "1",
+      "icon": "el-icon-lx-people",
+      "subs": [{
+        "title": "用户管理",
+        "index": "/system/user"
+      },{
+        "title": "角色管理",
+        "index": "/system/role"
+      },{
+        "title": "菜单管理",
+        "index": "/system/menu"
+      }
+      ]
+    }
+  ]
+}
